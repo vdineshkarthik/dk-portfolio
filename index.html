@@ -264,7 +264,7 @@ html, body { overflow-y: auto !important; }
 
             <!-- YouTube Embed -->
             <div class="row justify-content-right">
-				 <div class="ratio ratio-16x9 rounded-4 overflow-hidden">
+				 <div class="ratio ratio-16x9 rounded-4 overflow-hidden row justify-content-right">
               <iframe 
                 src="https://www.youtube.com/embed/YTN27MGV6jA" 
                 title="YouTube video"
@@ -812,51 +812,7 @@ the team that works towards growth of Organization.
     </div>
   </div>
 
-  <!-- Script (INSIDE CONTACT SECTION) -->
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-
-  const form = document.querySelector(".contact-form");
-  const reply = document.querySelector(".form__reply");
-  const button = document.getElementById("submitBtn");
-
-  form.addEventListener("submit", async function(e) {
-    e.preventDefault();
-
-    button.disabled = true;
-    button.innerText = "Sending...";
-
-    const data = new FormData(form);
-
-    try {
-      const response = await fetch(form.action, {
-        method: "POST",
-        body: data
-      });
-
-      if (response.ok) {
-        form.reset();
-
-        // 🔥 SHOW SUCCESS MESSAGE
-        reply.style.display = "block";
-
-        button.innerText = "Sent ✅";
-      } else {
-        alert("❌ Failed to send");
-        button.disabled = false;
-        button.innerText = "Send Message";
-      }
-
-    } catch (error) {
-      alert("❌ Network error");
-      button.disabled = false;
-      button.innerText = "Send Message";
-    }
-  });
-
-});
-</script>
-<!-- Contact Section End -->
+ 
 
               <!-- Contact Form End -->
 
@@ -1079,6 +1035,51 @@ document.addEventListener("DOMContentLoaded", function () {
         return (direction = 1) => (min + delta * Math.random()) * direction;
       }
     </script>
+	<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const form = document.querySelector(".contact-form");
+  const reply = document.querySelector(".form__reply");
+  const button = document.getElementById("submitBtn");
+
+  if (!form) return;
+
+  form.addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    button.disabled = true;
+    button.innerText = "Sending...";
+
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data
+      });
+
+      if (response.ok) {
+        form.reset();
+
+        form.style.display = "none";
+        reply.style.display = "block";
+
+        button.innerText = "Sent ✅";
+      } else {
+        alert("❌ Failed to send");
+        button.disabled = false;
+        button.innerText = "Send Message";
+      }
+
+    } catch (error) {
+      alert("❌ Network error");
+      button.disabled = false;
+      button.innerText = "Send Message";
+    }
+  });
+
+});
+</script>
     <script src="js/app.js"></script>
     <script src="js/gallery-init.js"></script>
     <!-- Load Scripts End -->
