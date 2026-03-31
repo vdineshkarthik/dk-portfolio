@@ -1,4 +1,4 @@
-css      /*! ------------------------------------------------
+/*! ------------------------------------------------
  * Project Name: Name: Braxton - Personal Portfolio & Resume HTML Template
  * Project Description: Show yourself brightly with Braxton - unique and creative portfolio and resume template!
  * Tags: mix_design, resume, portfolio, personal page, cv, template, one page, responsive, html5, css3, creative, clean 
@@ -53,7 +53,7 @@ css      /*! ------------------------------------------------
 /* Template Backgrounds Start */
 /* ------------------------------------------------*/
 .image-background {
-  background-image: url(..img/backgrounds/1920x1080-main-bg.webp);
+  background-image: url(../img/backgrounds/1920x1080-main-bg.webp);
 }
 
 /* ------------------------------------------------*/
@@ -4273,98 +4273,8 @@ form textarea:required:valid {
   .no-touch .socials-square__link:hover i {
     text-shadow: 0 -5rem var(--t-bright), 0 0 var(--t-bright);
   }
- /* ===== PORTFOLIO VIDEO CARD FIX ===== */
-
-/* ===============================
-   CLEAN PORTFOLIO VIDEO STYLE
-================================= */
-
-/* ===== PORTFOLIO VIDEO GRID ===== */
-
-/* ===== CLEAN PORTFOLIO GRID ===== */
-
-/* ===== CLEAN PORTFOLIO STYLE ===== */
-
-.portfolio-card {
-  background: #ffffff;
-  border-radius: 24px;
-  padding: 20px;
-  box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-  transition: all 0.3s ease;
-  height: 100%;
 }
 
-.portfolio-card:hover {
-  transform: translateY(-6px);
-}
-
-.portfolio-card video {
-  width: 100%;
-  border-radius: 16px;
-  display: block;
-}
-
-.portfolio-info {
-  margin-top: 18px;
-}
-
-.portfolio-info h5 {
-  font-weight: 600;
-  margin-bottom: 12px;
-}
-
-.portfolio-tags {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
-
-.portfolio-tags span {
-  background: #111;
-  color: #fff;
-  padding: 6px 14px;
-  border-radius: 20px;
-  font-size: 13px;
-}
-
-.portfolio-card {
-  background: #ffffff;
-  border-radius: 24px;
-  transition: 0.3s ease;
-  height: 100%;
-}
-
-.portfolio-card:hover {
-  transform: translateY(-6px);
-}
-
-.portfolio-card video {
-  display: block;
-}
-
-}
-/* FIX OVERLAP ISSUE */
-section {
-    position: relative;
-    z-index: 1;
-}
-
-.content__wrapper {
-    overflow: hidden;
-}
-
-.portfolio-card {
-    background: var(--card-bg);
-    border-radius: 24px;
-}
-
-video {
-    display: block;
-    max-width: 100%;
-}
-
-
-}
 /* ------------------------------------------------*/
 /* Features Socials End */
 /* ------------------------------------------------*/
