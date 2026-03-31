@@ -741,50 +741,114 @@ the team that works towards growth of Organization.
               <!-- Reply Messages End -->
 
               <!-- Contact Form Start -->
-       <form class="form contact-form"
-      action="https://api.web3forms.com/submit"
-      method="POST">
+<!-- Contact Section Start -->
+<section id="contact" class="inner contact">
 
-  <!-- Web3Forms Access Key -->
-  <input type="hidden" name="access_key" value="96c06b7a-7ce2-412b-a35a-dcf9599fab99">
+  <!-- Title -->
+  <div class="content__block section-title">
+    <p class="h2__subtitle animate-in-up">
+      <span>Contact</span>
+    </p>
+    <h2 class="h2__title animate-in-up">Let's make something awesome together!</h2>
+  </div>
 
-  <!-- Same Settings (converted) -->
-  <input type="hidden" name="subject" value="New Message From Portfolio Website">
-  <input type="hidden" name="redirect" value="https://vdineshkarthik.github.io/#contact">
+  <!-- Form Container -->
+  <div class="content__block grid-block block-grid-large">
+    <div class="form-container">
 
-  <div class="container-fluid p-0">
-    <div class="row gx-0">
-
-      <div class="col-12 col-md-6 form__item animate-in-up">
-        <input type="text" name="name" placeholder="Your Name*" required>
+      <!-- Success Message -->
+      <div class="form__reply centered text-center" style="display:none;">
+        <i class="ph-bold ph-smiley reply__icon"></i>
+        <p class="reply__title">Done!</p>
+        <span class="reply__text">✅ Message sent successfully. I'll get back soon.</span>
       </div>
 
-      <div class="col-12 col-md-6 form__item animate-in-up">
-        <input type="text" name="company" placeholder="Company Name">
-      </div>
+      <!-- Contact Form -->
+      <form class="form contact-form"
+            action="https://api.web3forms.com/submit"
+            method="POST">
 
-      <div class="col-12 col-md-6 form__item animate-in-up">
-        <input type="email" name="email" placeholder="Email Address*" required>
-      </div>
+        <!-- Web3Forms Key -->
+        <input type="hidden" name="access_key" value="96c06b7a-7ce2-412b-a35a-dcf9599fab99">
 
-      <div class="col-12 col-md-6 form__item animate-in-up">
-        <input type="tel" name="phone" placeholder="Phone Number*" required>
-      </div>
+        <input type="hidden" name="subject" value="New Message From Portfolio Website">
 
-      <div class="col-12 form__item animate-in-up">
-        <textarea name="message" placeholder="A Few Words*" required></textarea>
-      </div>
+        <div class="container-fluid p-0">
+          <div class="row gx-0">
 
-      <div class="col-12 form__item animate-in-up">
-        <button class="btn btn-default btn-hover btn-hover-accent" type="submit">
-          <span class="btn-caption">Send Message</span>
-          <i class="ph-bold ph-paper-plane-tilt"></i>
-        </button>
-      </div>
+            <div class="col-12 col-md-6 form__item animate-in-up">
+              <input type="text" name="name" placeholder="Your Name*" required>
+            </div>
+
+            <div class="col-12 col-md-6 form__item animate-in-up">
+              <input type="text" name="company" placeholder="Company Name">
+            </div>
+
+            <div class="col-12 col-md-6 form__item animate-in-up">
+              <input type="email" name="email" placeholder="Email Address*" required>
+            </div>
+
+            <div class="col-12 col-md-6 form__item animate-in-up">
+              <input type="tel" name="phone" placeholder="Phone Number*" required>
+            </div>
+
+            <div class="col-12 form__item animate-in-up">
+              <textarea name="message" placeholder="A Few Words*" required></textarea>
+            </div>
+
+            <div class="col-12 form__item animate-in-up">
+              <button id="submitBtn" class="btn btn-default btn-hover btn-hover-accent" type="submit">
+                <span class="btn-caption">Send Message</span>
+                <i class="ph-bold ph-paper-plane-tilt"></i>
+              </button>
+            </div>
+
+          </div>
+        </div>
+      </form>
 
     </div>
   </div>
-</form>
+
+  <!-- Script (INSIDE CONTACT SECTION) -->
+  <script>
+  document.querySelector(".contact-form").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const form = e.target;
+    const button = document.getElementById("submitBtn");
+
+    button.disabled = true;
+    button.innerText = "Sending...";
+
+    const data = new FormData(form);
+
+    try {
+      const response = await fetch(form.action, {
+        method: "POST",
+        body: data
+      });
+
+      if (response.ok) {
+        form.reset();
+        document.querySelector(".form__reply").style.display = "block";
+        button.innerText = "Sent ✅";
+      } else {
+        alert("❌ Failed to send message");
+        button.disabled = false;
+        button.innerText = "Send Message";
+      }
+
+    } catch (error) {
+      alert("❌ Network error");
+      button.disabled = false;
+      button.innerText = "Send Message";
+    }
+  });
+  </script>
+
+</section>
+<!-- Contact Section End -->
 
               <!-- Contact Form End -->
 
