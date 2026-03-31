@@ -713,27 +713,11 @@ the team that works towards growth of Organization.
             <!-- Tools List End -->
           </div>
          
-        <!-- Contact Section Start -->
+        <!-- Contactform  Section Start -->
         <section id="contact" class="inner contact">
 
           <!-- Content Block - H2 Section Title Start -->
-          <div class="content__block section-title">
-            <p class="h2__subtitle  animate-in-up">
-              <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="13px" height="13px" viewBox="0 0 13 13" fill="currentColor">
-                <path fill="currentColor" d="M5.6,12.6c-0.5-0.8-0.7-2.4-1.7-3.5c-1-1-2.7-1.2-3.5-1.7C-0.1,7-0.1,6,0.4,5.6c0.8-0.5,2.3-0.6,3.5-1.8
-                  C5,2.8,5.1,1.2,5.6,0.4C6-0.1,7-0.1,7.4,0.4c0.5,0.8,0.7,2.4,1.8,3.5c1.2,1.2,2.6,1.2,3.5,1.7c0.6,0.4,0.6,1.4,0,1.7
-                  C11.8,7.9,10.2,8,9.1,9.1c-1,1-1.2,2.7-1.7,3.5C7,13.1,6,13.1,5.6,12.6z"/>
-              </svg>
-              <span>Contact</span>
-            </p>
-            <h2 class="h2__title  animate-in-up">Let's make something awesome together!</h2>
-          </div>
-          <!-- Content Block - H2 Section Title End -->
-
-         
-
-              <!-- Contact Form Start -->
-<!-- Contact Section Start -->
+         <!-- Contact Section -->
 <section id="contact" class="inner contact">
 
   <!-- Title -->
@@ -741,22 +725,27 @@ the team that works towards growth of Organization.
     <p class="h2__subtitle animate-in-up">
       <span>Contact</span>
     </p>
-    <h2 class="h2__title animate-in-up">Let's make something awesome together!</h2>
+    <h2 class="h2__title animate-in-up">
+      Let's make something awesome together!
+    </h2>
   </div>
 
-  <!-- Form Container -->
+  <!-- Form Area -->
   <div class="content__block grid-block block-grid-large">
     <div class="form-container">
 
-      <!-- Success Message -->
-      <div class="form__reply centered text-center" style="display:none;">
+      <!-- SUCCESS MESSAGE -->
+      <div id="successMessage" class="form__reply centered text-center" style="display:none;">
         <i class="ph-bold ph-smiley reply__icon"></i>
         <p class="reply__title">Done!</p>
-        <span class="reply__text">✅ Message sent successfully. I'll get back soon.</span>
+        <span class="reply__text">
+          ✅ Message sent successfully. I’ll get back to you soon!
+        </span>
       </div>
 
-      <!-- Contact Form -->
-      <form class="form contact-form"
+      <!-- FORM -->
+      <form id="contactForm"
+            class="form"
             action="https://api.web3forms.com/submit"
             method="POST">
 
@@ -768,30 +757,29 @@ the team that works towards growth of Organization.
         <div class="container-fluid p-0">
           <div class="row gx-0">
 
-            <div class="col-12 col-md-6 form__item animate-in-up">
+            <div class="col-12 col-md-6 form__item">
               <input type="text" name="name" placeholder="Your Name*" required>
             </div>
 
-            <div class="col-12 col-md-6 form__item animate-in-up">
+            <div class="col-12 col-md-6 form__item">
               <input type="text" name="company" placeholder="Company Name">
             </div>
 
-            <div class="col-12 col-md-6 form__item animate-in-up">
+            <div class="col-12 col-md-6 form__item">
               <input type="email" name="email" placeholder="Email Address*" required>
             </div>
 
-            <div class="col-12 col-md-6 form__item animate-in-up">
+            <div class="col-12 col-md-6 form__item">
               <input type="tel" name="phone" placeholder="Phone Number*" required>
             </div>
 
-            <div class="col-12 form__item animate-in-up">
+            <div class="col-12 form__item">
               <textarea name="message" placeholder="A Few Words*" required></textarea>
             </div>
 
-            <div class="col-12 form__item animate-in-up">
-              <button id="submitBtn" class="btn btn-default btn-hover btn-hover-accent" type="submit">
-                <span class="btn-caption">Send Message</span>
-                <i class="ph-bold ph-paper-plane-tilt"></i>
+            <div class="col-12 form__item">
+              <button id="submitBtn" class="btn btn-default" type="submit">
+                Send Message
               </button>
             </div>
 
@@ -802,6 +790,7 @@ the team that works towards growth of Organization.
     </div>
   </div>
 
+</section>
  
 
               <!-- Contact Form End -->
