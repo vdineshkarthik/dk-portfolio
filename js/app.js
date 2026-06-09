@@ -90,13 +90,12 @@ $(function() {
   // --------------------------------------------- //
   // Lenis Scroll Plugin Start
   // --------------------------------------------- //
-  // Lenis disabled for debugging desktop scroll
-// const lenis = new Lenis()
-// function raf(time) {
-//   lenis.raf(time)
-//   requestAnimationFrame(raf)
-// }
-// requestAnimationFrame(raf)
+  const lenis = new Lenis()
+  function raf(time) {
+    lenis.raf(time)
+    requestAnimationFrame(raf)
+  }
+  requestAnimationFrame(raf)
   // --------------------------------------------- //
   // Lenis Scroll Plugin End
   // --------------------------------------------- //
@@ -175,27 +174,23 @@ $(function() {
   });
 
   // Grid 3x
-if (document.querySelectorAll(".animate-card-3").length > 0) {
-
-  gsap.set(".animate-card-3", { y: 50, opacity: 0 });
-
+  gsap.set(".animate-card-3", {y: 50, opacity: 0});
   ScrollTrigger.batch(".animate-card-3", {
     interval: 0.1,
     batchMax: 3,
     duration: 3,
     onEnter: batch => gsap.to(batch, {
-      opacity: 1,
+      opacity: 1, 
       y: 0,
       ease: 'sine',
-      stagger: { each: 0.15, grid: [1, 3] },
+      stagger: {each: 0.15, grid: [1, 3]}, 
       overwrite: true
     }),
-    onLeave: batch => gsap.set(batch, { opacity: 1, y: 0, overwrite: true }),
-    onEnterBack: batch => gsap.to(batch, { opacity: 1, y: 0, stagger: 0.15, overwrite: true }),
-    onLeaveBack: batch => gsap.set(batch, { opacity: 0, y: 50, overwrite: true })
+    onLeave: batch => gsap.set(batch, {opacity: 1, y: 0, overwrite: true}),
+    onEnterBack: batch => gsap.to(batch, {opacity: 1, y: 0, stagger: 0.15, overwrite: true}),
+    onLeaveBack: batch => gsap.set(batch, {opacity: 0, y: 50, overwrite: true})
   });
 
-}
   // Grid 5x
   gsap.set(".animate-card-5", {y: 50, opacity: 0});
   ScrollTrigger.batch(".animate-card-5", {
