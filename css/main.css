@@ -2939,16 +2939,17 @@ form textarea:required:valid {
   }
 }
 @media only screen and (min-width: 992px) {
-@media only screen and (min-width: 992px) {
   .avatar {
-    position: relative !important;
-    top: auto !important;
-    left: auto !important;
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
+    position: fixed;
+    top: 3rem;
+    left: 3rem;
+    width: 300px;
+    height: -moz-calc(100% - 6rem);
+    height: calc(100% - 6rem);
+    margin: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
-
 }
 @media only screen and (min-width: 1200px) {
   .avatar {
