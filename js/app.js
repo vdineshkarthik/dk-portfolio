@@ -91,12 +91,7 @@ if (card) {
   // --------------------------------------------- //
   // Lenis Scroll Plugin Start
   // --------------------------------------------- //
- // const lenis = new Lenis()
- // function raf(time) {
-  //  lenis.raf(time)
-  //  requestAnimationFrame(raf)
- // }
- // requestAnimationFrame(raf)
+ 
   // --------------------------------------------- //
   // Lenis Scroll Plugin End
   // --------------------------------------------- //
@@ -140,7 +135,7 @@ if (card) {
       rotate: value,
       scrollTrigger: {
         trigger: section,
-        scrub: true,
+        scrub: 0.5,
         toggleActions: 'play none none reverse',
       }
     });
