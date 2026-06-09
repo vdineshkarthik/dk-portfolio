@@ -4273,21 +4273,6 @@ form textarea:required:valid {
   .no-touch .socials-square__link:hover i {
     text-shadow: 0 -5rem var(--t-bright), 0 0 var(--t-bright);
   }
-  html,
-body {
-  height: auto !important;
-  overflow-y: auto !important;
-  overflow-x: hidden !important;
-}
-
-.content,
-.content__wrapper {
-  overflow: visible !important;
-}
-
-.gradient-background {
-  pointer-events: none;
-}
 }
 
 /* ------------------------------------------------*/
