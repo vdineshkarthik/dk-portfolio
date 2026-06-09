@@ -496,11 +496,18 @@ img {
   }
 }
 @media only screen and (min-width: 1400px) {
-  .background__svg01 {
-    top: -25vh;
-    right: -8vw;
-    width: 680px;
-    height: 680px;
+
+  .avatar {
+    top: 3rem;
+    left: 3rem;
+    width: 400px;
+    height: auto !important;
+    min-height: calc(100vh - 3rem);
+  }
+
+  .avatar__image img {
+    max-height: 340px;
+    object-fit: cover;
   }
 }
 @media only screen and (min-width: 1600px) {
@@ -1879,10 +1886,11 @@ form :-ms-input-placeholder { color: var(--t-placeholder); }
 }
 @media only screen and (min-width: 1400px) {
   .avatar {
-    top: 5rem;
-    left: 8rem;
+    top: 3rem;
+    left: 3rem;
     width: 400px;
-    height: calc(100% - 10rem);
+    height: auto !important;
+    min-height: calc(100vh - 6rem);
   }
 }
 @media only screen and (min-width: 1600px) {
@@ -2819,3 +2827,18 @@ html, body {
     display: block;
     object-fit: cover;
 }
+
+
+
+
+@media only screen and (min-width: 1400px) {
+
+  .avatar {
+    height: calc(100vh - 6rem);
+  }
+
+  .avatar__container {
+    overflow-y: auto;
+  }
+}
+
